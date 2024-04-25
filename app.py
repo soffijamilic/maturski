@@ -14,6 +14,10 @@ def honda():
 def toyota():
     return render_template("toyota.html")
 
+@app.route('/mazda')
+def mazda():
+    return render_template("toyota.html")
+
 
 app.run()
 

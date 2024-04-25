@@ -1,3 +1,10 @@
 h1{
     text-align: center;
 }
+.dugmici{
+    text-align: center;
+}
+form {
+    margin: 20px; 
+    display: inline-block; 
+}
