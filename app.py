@@ -16,7 +16,7 @@ def toyota():
 
 @app.route('/mazda')
 def mazda():
-    return render_template("toyota.html")
+    return render_template("mazda.html")
 
 
 app.run()
