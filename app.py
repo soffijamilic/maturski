@@ -10,7 +10,7 @@ def home():
     return render_template("index.html")
 
 @app.route('/honda')
-def home():
-    return render_template("index.html")
+def honda():
+    return render_template("honda.html")
 app.run()
 
