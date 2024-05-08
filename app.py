@@ -18,6 +18,10 @@ def toyota():
 def mazda():
     return render_template("mazda.html")
 
+@app.route('/search',method=['GET'])
+def search():
+    model=request.args.get("model")
+    
 
 app.run()
 
