@@ -4,7 +4,7 @@
     align-items: center;
     background-color: #333;
     color: white;
-   
+    position: fixed;
 }
 h1{
     text-align: center;
