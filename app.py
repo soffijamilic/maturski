@@ -18,13 +18,13 @@ def toyota():
 def mazda():
     return render_template("mazda.html")
 
-@app.route('/login')
+#@app.route('/login')
 def login():
     return render_template("login.html")
 
-@app.route('/signup')
+#@app.route('/signup')
 def signup():
-    return render_template("login.html")
+    return render_template("signup.html")
 
 #@app.route('/search',method=['GET'])
 #def search():
