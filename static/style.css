@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #3a689f;
     color: white;
-    position: fixed;
+    
 }
 h1{
     text-align: center;
