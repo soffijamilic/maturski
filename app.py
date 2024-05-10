@@ -18,9 +18,14 @@ def toyota():
 def mazda():
     return render_template("mazda.html")
 
-@app.route('/search',method=['GET'])
-def search():
-    model=request.args.get("model")
+@app.route('/login')
+def login():
+    return render_template("login.html")
+
+
+#@app.route('/search',method=['GET'])
+#def search():
+ #   model=request.args.get("model")
     
 
 app.run()
