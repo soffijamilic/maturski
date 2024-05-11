@@ -7,12 +7,18 @@
     <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
 </head>
 <body>
-    <nav class="navbar">
+    <header>
         <div class="logo">
-            <img src="D:\maturski\slike\logo.png" alt="Logo">
-            <p>ovo je nav bar</p>
+            <img src="logo1.png" alt="Logo">
+            <h1>Prodaja Polovnih Automobila</h1>
         </div>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="#">Login/Register</a></li>
+                <li><a href="#">Add Advertisement</a></li>
+            </ul>
+        </nav>
+    </header>
     <h1>Ovo je Pocetna stranica</h1>
     <div class="dugmici">
         <form action="/honda" method="get">
