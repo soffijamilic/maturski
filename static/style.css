@@ -2,9 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3a689f;
+    background-color: #F39C12;/*#7F8C8D  zelenkasta*/
     color: white;
-    
+}
+li{
+    align-items:baseline;
 }
 h1{
     text-align: center;
