@@ -6,7 +6,7 @@ app.config['LOGO_FOLDER'] = 'static/slike'
 
 @app.route('/')
 def home():
-    return render_template("index.html",logo_path="loggo.png")
+    return render_template("index.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
