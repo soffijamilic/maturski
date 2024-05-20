@@ -9,9 +9,9 @@
 <body>
     <header>    
         <nav class="navbar"></nav>
-            <div class="logo">
+            <a href="{{ url_for('home') }}">
                 <img src="{{ url_for('static', filename='loggo.png') }}" class="logo" alt="Logo">
-            </div>
+            </a>
             <ul>
                 <li><a href="login">Login</a></li>
                 <li><a href="register">Register</a></li>

@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
     <title>TOYOTA</title>
 </head>
 <body>
-    <img src="{{ url_for('static', filename='loggo.png') }}" class="logo" alt="Logo">
+    <a href="{{ url_for('home') }}">
+        <img src="{{ url_for('static', filename='loggo.png') }}" class="logo" alt="Logo">
+    </a>
     <h1>OVO JE STRANICA ZA TOYOTA MODELE</h1>
     <p>toyota automobili</p>
+    <a href="{{ url_for('home') }}">Back to Home</a>
 </body>
 </html>

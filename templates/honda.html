@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <!-- <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='styleh.css')}}">-->
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
     <title>HONDA</title>
 </head>
 <body>
-    <img src="{{ url_for('static', filename='loggo.png') }}" class="logo" alt="Logo">
-    <h1>Toyota Advertisements</h1>
+    <a href="{{ url_for('home') }}">
+        <img src="{{ url_for('static', filename='loggo.png') }}" class="logo" alt="Logo">
+    </a>
     <h1>HONDA MODELI</h1>
     <p>honda automobili</p>
-
+    
 </body>
 </html>
 
