@@ -20,3 +20,7 @@ form {
     margin: 40px; 
     display: inline-block; 
 }
+.logo{
+    height: 70px;
+    width: 70px;
+}
