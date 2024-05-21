@@ -11,14 +11,19 @@
         <nav class="navbar"></nav>
             <a href="{{ url_for('home') }}">
                 <img src="{{ url_for('static', filename='loggo.png') }}" class="logo" alt="Logo">
-            </a>
-            <ul>
+            </a>  
+
+            <h1>Ovo je Pocetna stranica</h1>
+
+            <ul class="menu">
                 <li><a href="login">Login</a></li>
                 <li><a href="register">Register</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Ovo je Pocetna stranica</h1>
+  
+
+    
     <div class="dugmici">
         <form action="/honda" method="get">
             <button type="submit">Go to Honda</button>
