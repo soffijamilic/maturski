@@ -10,10 +10,10 @@
     <header>    
         <nav class="navbar"></nav>
             <a href="{{ url_for('home') }}">
-                <img src="{{ url_for('static', filename='loggo.png') }}" class="logo" alt="Logo">
+                <img src="{{ url_for('static', filename='loggo.png') }}" class="logo" alt="Prodaja Polovnih Automobila">
             </a>  
 
-            <h1>Ovo je Pocetna stranica</h1>
+            <!--<h1>Ovo je Pocetna stranica</h1>-->
 
             <ul class="menu">
                 <li><a href="login">Login</a></li>
@@ -21,9 +21,9 @@
             </ul>
         </nav>
     </header>
-  
+    <h1>Pretrazite automobil za Vas!</h1>
 
-    
+
     <div class="dugmici">
         <form action="/honda" method="get">
             <button type="submit">Go to Honda</button>

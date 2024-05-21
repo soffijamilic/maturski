@@ -1,16 +1,27 @@
 
 header{
-    background-color: #F39C12;/*#7F8C8D  zelenkasta*/
-}
+    background-color:white;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+};/* #F39C12;#7F8C8D  zelenkasta*/
+
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background-color:white;
+    padding: 0px;
+    margin: 0px;
 }
 .navbar{
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
+    position: fixed;
     
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 60px;
 }
 .logo{
     height: 70px;
@@ -28,16 +39,12 @@ body{
     display: inline;
     margin: 20px;
     font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
 }
 li{
     align-items:baseline;
 }
-.navbar h1 {
-  
-    margin: 0;
-    flex-grow: 1;
-    text-align: center;
-}
+
 .dugmici{
     text-align: center;
     
