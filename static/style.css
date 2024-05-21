@@ -68,3 +68,52 @@ form {
     display: inline;
     margin: 20px;
 }
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-info, .location-info, .legal-info {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.contact-info ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.contact-info ul li a:hover {
+    text-decoration: underline;
+}
+#vratinavrh {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+}
+
+#vratinavrh:hover {
+    background-color: #0056b3;
+}
