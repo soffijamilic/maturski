@@ -21,6 +21,7 @@ CREATE TABLE oglas (
   body TEXT NOT NULL,
   cena INTEGER NOT NULL,
   kilometraza INTEGER NOT NULL,
+  godiste INTEGER NOT NULL,
   id_marke INTEGER NOT NULL,
   id_modela INTEGER NOT NULL,
   id_goriva INTEGER NOT NULL,
@@ -36,28 +37,42 @@ CREATE TABLE oglas (
 
 CREATE TABLE marka (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  naziv INTEGER NOT NULL
+  naziv TEXT NOT NULL
 );
 
 CREATE TABLE model (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  naziv INTEGER NOT NULL,
+  naziv TEXT NOT NULL,
   id_marke INTEGER NOT NULL,
   FOREIGN KEY (id_marke) REFERENCES marka (id)
 );
 
 CREATE TABLE gorivo (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  naziv INTEGER NOT NULL
+  naziv TEXT NOT NULL
 );
 
 CREATE TABLE tip_vozila (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  naziv INTEGER NOT NULL
+  naziv TEXT NOT NULL
 );
 
 CREATE TABLE pogon (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  naziv INTEGER NOT NULL
+  naziv TEXT NOT NULL
 );
 
+INSERT INTO marka (naziv)
+VALUES 
+   ('Toyota'),
+   ('Honda'),
+   ('Mazda');
+
+INSERT INTO gorivo (naziv)
+VALUES 
+   ('Dizel'),
+   ('Benzin'),
+   ('Elektricni pogon')
+   ('Hibridni pogon'),
+   ('Benzin + Gas (TNG)'),
+   ('Benzin + Metan (CNG)');
