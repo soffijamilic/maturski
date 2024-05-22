@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='stylea.css')}}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='loggo.png') }}">
     <title>Honda modeli</title>
 </head>
 <body>
     <header>
-        <a href="{{ url_for('home') }}">
-            <img src="{{ url_for('static', filename='loggo.png') }}" class="logo" alt="Logo">
-        </a>
+        <nav class="navbar" style="display: flex;justify-content: start;">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='loggo.png') }}" class="logo" alt="Logo">
+            </a>
+        </nav>
     </header>
     <h1>HONDA MODELI</h1>
     <p>honda automobili</p>

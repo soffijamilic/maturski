@@ -10,16 +10,17 @@
 </head>
 <body>
     <header>    
-        
+        <nav class="navbar">
             <a href="{{ url_for('home') }}">
                 <img src="{{ url_for('static', filename='loggo.png') }}" class="logo" alt="Prodaja Polovnih Automobila">
             </a>  
 
             <!--<h1>Ovo je Pocetna stranica</h1>-->
-           
-            <li class="menu"><a href="login">Login</a></li>
-            <li class="menu"><a href="register">Register</a></li>
-            
+           <div class="menu">
+            <li><a href="login">Login</a></li>
+            <li><a href="register">Register</a></li>
+            </div>
+        </nav> 
     
     </header>
     <!--<h1>Pretrazite automobil za Vas!</h1>-->

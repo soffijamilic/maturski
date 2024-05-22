@@ -1,17 +1,16 @@
-
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-color:white;
     padding: 0px;
     margin: 0px;
 }
-header{
-    /*background-color:rgb(94, 167, 234);*/
-    background-color: #F39C12;
+/*header{
+    background-color:rgb(94, 167, 234);
+    background-color: F39C12;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     height: 80px;
-};/* #F39C12;#7F8C8D  zelenkasta*/
-
+};/* #F39C12;#7F8C8D  zelenkasta
+*/*/
 nav.navbar{
     padding: 0px;
 }
@@ -62,54 +61,4 @@ form {
 .logo{
     height: 70px;
     width: 70px;
-}
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-h3{
-    font-size: larger;
-}
-.contact-info, .location-info, .legal-info {
-    flex: 1;
-    margin-right: 20px;
-}
-
-.contact-info ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.contact-info ul li {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-.contact-info ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.contact-info ul li a:hover {
-    text-decoration: underline;
-}
-#vratinavrh {
-    background-color: #007bff;
-    color: #fff;
-    border: 0px;
-    border-radius: 20px;
-    padding: 10px 20px;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: none;
-}
-
-#vratinavrh:hover {
-    background-color: #0056b3;
 }
