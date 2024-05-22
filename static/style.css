@@ -6,18 +6,12 @@ body{
     margin: 0px;
 }
 header{
-    background-color:white;
+    background-color:rgb(94, 167, 234);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    height: 80qpx;
 };/* #F39C12;#7F8C8D  zelenkasta*/
 
-.navbar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    position: fixed;
-}
+
 h1{
     font-family: Arial, Helvetica, sans-serif;
     margin: 60px;
@@ -26,12 +20,13 @@ h1{
     height: 70px;
     width: 70px;
     justify-content: center;
-
 }
 .menu {
     position: absolute;
+   
+    list-style-type: none;
+    margin: 30px;
     padding: 0;
-    margin: 0;
 }
 .menu a{
     color: black;
@@ -41,11 +36,8 @@ h1{
     display: inline;
     font-size: larger;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 20px;
 }
-h1{
-    margin: 50px;
-}
-
 .dugmici{
     text-align: center;   
 }
@@ -57,20 +49,6 @@ form {
     height: 70px;
     width: 70px;
 }
-.menu {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    list-style-type: none;
-    margin: 30px;
-    padding: 0;
-}
-.menu li {
-    display: inline;
-    margin: 20px;
-}
-
-
 footer {
     background-color: #333;
     color: #fff;
@@ -120,7 +98,4 @@ h3{
 
 #vratinavrh:hover {
     background-color: #0056b3;
-}
-svg{
-   font-size: larger;
 }
