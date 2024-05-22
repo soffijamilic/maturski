@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block header %}
+<!--{% extends 'base.html' %} {% block header %}
 <h1>{% block title %}Register{% endblock %}</h1>
 {% endblock %} {% block content %}
 <form method="post">
@@ -34,3 +34,30 @@
     />
 </form>
 {% endblock %}
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="styles.css"> <!-- Adjust path as needed -->
+</head>
+<body>
+    <main>
+        <h2>Register</h2>
+        <!-- Flash messages would go here, handled by JavaScript if needed -->
+        <form method="post" action="/register">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" required>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="/login">Login here</a>.</p>
+    </main>
+</body>
+</html>

@@ -6,7 +6,7 @@ body{
     margin: 0px;
 }
 header{
-    background-color:rgb(245, 227, 227);
+    background-color:white;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
 };/* #F39C12;#7F8C8D  zelenkasta*/
@@ -15,7 +15,7 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(214, 212, 212);
+    color: white;
     position: fixed;
 }
 h1{
@@ -26,26 +26,28 @@ h1{
     height: 70px;
     width: 70px;
     justify-content: center;
-    /*margin-left: 50px;*/
+
 }
 .menu {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    list-style-type: none;
-    /*margin: 30px;*/
     padding: 0;
+    margin: 0;
+}
+.menu a{
+    color: black;
+    text-decoration: none;
 }
 .menu li {
     display: inline;
-   /* margin: 30px;*/
     font-size: larger;
     font-family: Arial, Helvetica, sans-serif;
 }
+h1{
+    margin: 50px;
+}
 
 .dugmici{
-    text-align: center;
-    
+    text-align: center;   
 }
 form {
     margin: 40px; 

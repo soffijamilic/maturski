@@ -1,3 +1,5 @@
+
+
 """from flask import Flask, render_template
 import os
 
@@ -37,4 +39,4 @@ def create_app():
         return render_template("oglas/index.html", oglasi=oglasi)
     return app
 
-""""
+"""
