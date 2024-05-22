@@ -17,8 +17,6 @@ header{
     align-items: center;
     color: rgb(214, 212, 212);
     position: fixed;
-    margin:30px;
-    
 }
 h1{
     font-family: Arial, Helvetica, sans-serif;
@@ -27,6 +25,7 @@ h1{
 .logo{
     height: 70px;
     width: 70px;
+    justify-content: center;
     /*margin-left: 50px;*/
 }
 .menu {
@@ -78,7 +77,9 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
 }
-
+h3{
+    font-size: larger;
+}
 .contact-info, .location-info, .legal-info {
     flex: 1;
     margin-right: 20px;
@@ -105,7 +106,8 @@ footer {
 #vratinavrh {
     background-color: #007bff;
     color: #fff;
-    border: none;
+    border: 0px;
+    border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
     position: fixed;
@@ -116,4 +118,7 @@ footer {
 
 #vratinavrh:hover {
     background-color: #0056b3;
+}
+svg{
+   font-size: larger;
 }
