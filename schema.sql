@@ -128,54 +128,50 @@ VALUES
 
 INSERT INTO menjac (naziv,id_modela)
 VALUES 
-   -- Toyota modeli
-  ('Manuelni', 1),      -- Corolla
-  ('Automatski', 2),    -- Camry
-  ('Automatski', 3),    -- RAV4
-  ('Automatski', 4),    -- Prius
-  ('Automatski', 5),    -- Highlander
-  ('Automatski', 6),    -- Land Cruiser
-  ('Manuelni', 7),      -- Yaris
-  ('Automatski', 8),    -- 4Runner
-  ('Manuelni', 9),      -- Tacoma
-  ('Automatski', 9),    -- Tacoma (drugi menjac)
-  ('Automatski', 10),   -- C-HR
-
-  -- Mazda modeli
-  ('Manuelni', 11),     -- Mazda3
-  ('Automatski', 11),   -- Mazda3 (drugi menjac)
-  ('Manuelni', 12),     -- Mazda6
-  ('Automatski', 12),   -- Mazda6 (drugi menjac)
-  ('Manuelni', 13),     -- CX-3
-  ('Automatski', 13),   -- CX-3 (drugi menjac)
-  ('Manuelni', 14),     -- CX-5
-  ('Automatski', 14),   -- CX-5 (drugi menjac)
-  ('Automatski', 15),   -- CX-9
-  ('Manuelni', 16),     -- Mazda2
-  ('Automatski', 16),   -- Mazda2 (drugi menjac)
-  ('Automatski', 17),   -- CX-30
-  ('Automatski', 18),   -- MX-30
-  ('Manuelni', 19),     -- CX-7
-  ('Automatski', 19),   -- CX-7 (drugi menjac)
-  ('Manuelni', 20),     -- B-Series
-  ('Automatski', 20);   -- B-Series (drugi menjac)
-
-  -- Honda modeli
-  ('Manuelni', 21),     -- Civic
-  ('Automatski', 21),   -- Civic (drugi menjac)
-  ('Manuelni', 22),     -- Accord
-  ('Automatski', 22),   -- Accord (drugi menjac)
-  ('Manuelni', 23),     -- CR-V
-  ('Automatski', 23),   -- CR-V (drugi menjac)
-  ('Automatski', 24),   -- Pilot
-  ('Manuelni', 25),     -- Fit (Jazz)
-  ('Automatski', 25),   -- Fit (Jazz) (drugi menjac)
-  ('Manuelni', 26),     -- HR-V
-  ('Automatski', 26),   -- HR-V (drugi menjac)
-  ('Automatski', 27),   -- Insight
-  ('Manuelni', 28),     -- Passport
-  ('Automatski', 28),   -- Passport (drugi menjac)
-  ('Automatski', 29),   -- Ridgeline
-  ('Automatski', 30);   -- Clarity
-
-
+  --toyota
+  ('Manuelni', 1),
+  ('Automatski', 2),
+  ('Automatski', 3),
+  ('Automatski', 4),
+  ('Automatski', 5),
+  ('Automatski', 6),
+  ('Manuelni', 7),
+  ('Automatski', 8),
+  ('Manuelni', 9),
+  ('Automatski', 9),
+  ('Automatski', 10),
+  --mazda
+  ('Manuelni', 11),
+  ('Automatski', 11),
+  ('Manuelni', 12),
+  ('Automatski', 12),
+  ('Manuelni', 13),
+  ('Automatski', 13),
+  ('Manuelni', 14),
+  ('Automatski', 14),
+  ('Automatski', 15),
+  ('Manuelni', 16),
+  ('Automatski', 16),
+  ('Automatski', 17),
+  ('Automatski', 18),
+  ('Manuelni', 19),
+  ('Automatski', 19),
+  ('Manuelni', 20),
+  ('Automatski', 20),
+  --honda
+  ('Manuelni', 21),
+  ('Automatski', 21),
+  ('Manuelni', 22),
+  ('Automatski', 22),
+  ('Manuelni', 23),
+  ('Automatski', 23),
+  ('Automatski', 24),
+  ('Manuelni', 25),
+  ('Automatski', 25),
+  ('Manuelni', 26),
+  ('Automatski', 26),
+  ('Automatski', 27),
+  ('Manuelni', 28),
+  ('Automatski', 28),
+  ('Automatski', 29),
+  ('Automatski', 30);
