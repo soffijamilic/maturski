@@ -26,13 +26,13 @@ CREATE TABLE oglas (
   id_modela INTEGER NOT NULL,
   id_goriva INTEGER NOT NULL,
   id_tipa INTEGER NOT NULL,
-  id_pogona INTEGER NOT NULL,
+  id_menjaca INTEGER NOT NULL,
   FOREIGN KEY (author_id) REFERENCES user (id),
   FOREIGN KEY (id_marke) REFERENCES marka (id),
   FOREIGN KEY (id_modela) REFERENCES model (id),
   FOREIGN KEY (id_goriva) REFERENCES gorivo (id),
   FOREIGN KEY (id_tipa) REFERENCES tip_vozila (id),
-  FOREIGN KEY (id_pogona) REFERENCES pogon (id)
+  FOREIGN KEY (id_menjaca) REFERENCES menjac (id)
 );
 
 CREATE TABLE marka (
@@ -60,9 +60,7 @@ CREATE TABLE tip_vozila (
 
 CREATE TABLE menjac (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  naziv TEXT NOT NULL,
-  id_modela INTEGER NOT NULL,
-  FOREIGN KEY (id_modela) REFERENCES model (id)
+  naziv TEXT NOT NULL
 );
 
 INSERT INTO marka (naziv)
@@ -126,52 +124,7 @@ VALUES
   ('Hibrid'),
   ('Kamionet');
 
-INSERT INTO menjac (naziv,id_modela)
+INSERT INTO menjac (naziv)
 VALUES 
-  --toyota
-  ('Manuelni', 1),
-  ('Automatski', 2),
-  ('Automatski', 3),
-  ('Automatski', 4),
-  ('Automatski', 5),
-  ('Automatski', 6),
-  ('Manuelni', 7),
-  ('Automatski', 8),
-  ('Manuelni', 9),
-  ('Automatski', 9),
-  ('Automatski', 10),
-  --mazda
-  ('Manuelni', 11),
-  ('Automatski', 11),
-  ('Manuelni', 12),
-  ('Automatski', 12),
-  ('Manuelni', 13),
-  ('Automatski', 13),
-  ('Manuelni', 14),
-  ('Automatski', 14),
-  ('Automatski', 15),
-  ('Manuelni', 16),
-  ('Automatski', 16),
-  ('Automatski', 17),
-  ('Automatski', 18),
-  ('Manuelni', 19),
-  ('Automatski', 19),
-  ('Manuelni', 20),
-  ('Automatski', 20),
-  --honda
-  ('Manuelni', 21),
-  ('Automatski', 21),
-  ('Manuelni', 22),
-  ('Automatski', 22),
-  ('Manuelni', 23),
-  ('Automatski', 23),
-  ('Automatski', 24),
-  ('Manuelni', 25),
-  ('Automatski', 25),
-  ('Manuelni', 26),
-  ('Automatski', 26),
-  ('Automatski', 27),
-  ('Manuelni', 28),
-  ('Automatski', 28),
-  ('Automatski', 29),
-  ('Automatski', 30);
+  ('Manuelni'),
+  ('Automatski');
