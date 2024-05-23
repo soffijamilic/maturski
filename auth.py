@@ -1,4 +1,4 @@
-from flask import Blueprint, flash, redirect, render_template, request, session, url_for, g
+"""from flask import Blueprint, flash, redirect, render_template, request, session, url_for, g
 import functools
 from .db import get_db
 bp = Blueprint("auth", __name__, url_prefix="/auth")
@@ -30,7 +30,13 @@ def login():
     
     return render_template("auth/login.html")
 
+@app.route('/login')
+def login():
+    return render_template("auth/login.html")
 
+@app.route('/register')
+def register():
+    return render_template("templates/auth/register.html")
 
 @bp.route("/logout", methods=["GET"])
 def logout():
@@ -47,3 +53,4 @@ def login_required(view):
         return view(**kwargs)
 
     return wrapped_view
+"""

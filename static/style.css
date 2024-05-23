@@ -8,8 +8,9 @@ body{
     align-items: center;
 }
 header{
-    /*background-color:rgb(94, 167, 234);*/
-    background-color: #F39C12;
+    /*background-color:rgb(94, 167, 234);
+    background-color: #F39C12;*/
+    background-color:#007bff;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
     height: 80px;
 };/* #F39C12;#7F8C8D  zelenkasta*/
@@ -20,12 +21,11 @@ nav.navbar{
 .navbar{
     display: flex;
     justify-content: space-between;
-    justify-content: center;
     align-items: center;
     background-color:#007bff;/* #F39C12;#7F8C8D  zelenkasta*/
     color: white;
-    padding: 0px;
-    margin: 0px;
+    padding: 0rem;
+    margin: 0;
    /* box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);*/
 }
 h1{
@@ -124,7 +124,7 @@ form {
     background-color: #218838;
 }
 footer {
-    background-color: #333;
+    background-color:#14457a;;
     color: #fff;
     padding: 20px;
     display: flex;
