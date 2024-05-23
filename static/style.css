@@ -22,7 +22,7 @@ nav.navbar{
     justify-content: space-between;
     justify-content: center;
     align-items: center;
-    background-color: #F39C12;/*#7F8C8D  zelenkasta*/
+    background-color:#007bff;/* #F39C12;#7F8C8D  zelenkasta*/
     color: white;
     padding: 0px;
     margin: 0px;
@@ -65,12 +65,15 @@ form {
     height: 70px;
     width: 70px;
 }
+
 .formapretrage {
     background: #fff;
     padding: 20px 40px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .formapretrage h2 {
@@ -80,23 +83,33 @@ form {
 }
 
 .pretraga {
-    margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 15px;
 }
 
-.pretraga label, 
+.pretraga div {
+    width: 15%;
+    margin-bottom: 15px;
+}
+
+.pretraga label {
+    display: flex;
+    margin-bottom: 5px;
+    color: #555;
+}
+
 .pretraga select, 
 .pretraga input {
-    width: 48%;
+    width: 100%;
     padding: 8px;
-    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
 }
 
 .pretraga button {
-    display: block;
-    width: 20%;
+    width: 100px;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
@@ -104,7 +117,7 @@ form {
     color: #fff;
     font-size: 16px;
     cursor: pointer;
-    margin-left: auto;
+    align-self: flex-end;
 }
 
 .pretraga button:hover {
@@ -146,7 +159,7 @@ h3{
 }
 #vratinavrh {
     background-color: #007bff;
-    color: #fff;
+    color: black;
     border: 0px;
     border-radius: 20px;
     padding: 10px 20px;

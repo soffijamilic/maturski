@@ -39,57 +39,75 @@
             <button type="submit">Go to Mazda</button>
         </form>
     </div>
-    <p>OVO JE NEKI TEKST</p>
-    
+    <h1>Dobro dosli na stranicu Prodaja Polovnih Automobila!</h1>
+    <br>
+    <br>
+    <br>
     <div class="formapretrage">
         <h2>Pretraga Automobila</h2>
         <form action="/pretraga" method="GET">
             <div class="pretraga">
-                <label for="marka">Marka vozila:</label>
-                <label for="model">Model vozila:</label>
-                <label for="gorivo">Vrsta goriva:</label>
-                <label for="tip_vozila">Tip vozila:</label>
-                <label for="pogon">Pogon:</label>
+                <div>
+                    <label for="marka">Marka vozila:</label>
+                    <select id="marka" name="marka">
+                        <option value="">Izaberite marku</option>
+                        <option value="1">Toyota</option>
+                        <option value="2">Honda</option>
+                        <option value="3">Mazda</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="model">Model vozila:</label>
+                    <select id="model" name="model">
+                        <option value="">Izaberite model</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="gorivo">Vrsta goriva:</label>
+                    <select id="gorivo" name="gorivo">
+                        <option value="">Izaberite vrstu goriva</option>
+                        <option value="1">Dizel</option>
+                        <option value="2">Benzin</option>
+                        <option value="3">Elektricni pogon</option>
+                        <option value="4">Hibridni pogon</option>
+                        <option value="5">Benzin + Gas (TNG)</option>
+                        <option value="6">Benzin + Metan (CNG)</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="tip_vozila">Tip vozila:</label>
+                    <select id="tip_vozila" name="tip_vozila">
+                        <option value="">Izaberite tip vozila</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="pogon">Pogon:</label>
+                    <select id="pogon" name="pogon">
+                        <option value="">Izaberite pogon</option>
+                    </select>
+                </div>
             </div>
             <div class="pretraga">
-                <select id="marka" name="marka">
-                    <option value="">Izaberite marku</option>
-                    <option value="1">Toyota</option>
-                    <option value="2">Honda</option>
-                    <option value="3">Mazda</option>
-                </select>
-                <select id="model" name="model">
-                    <option value="">Izaberite model</option>
-                </select>
-                <select id="gorivo" name="gorivo">
-                    <option value="">Izaberite vrstu goriva</option>
-                    <option value="1">Dizel</option>
-                    <option value="2">Benzin</option>
-                    <option value="3">Elektricni pogon</option>
-                    <option value="4">Hibridni pogon</option>
-                    <option value="5">Benzin + Gas (TNG)</option>
-                    <option value="6">Benzin + Metan (CNG)</option>
-                </select>
-                <select id="tip_vozila" name="tip_vozila">
-                    <option value="">Izaberite tip vozila</option>
-                </select>
-                <select id="pogon" name="pogon">
-                    <option value="">Izaberite pogon</option>
-                </select>
-            </div>
-            <div class="pretraga">
-                <label for="cena_od">Cena od:</label>
-                <label for="cena_do">Cena do:</label>
-                <label for="godiste_od">Godište od:</label>
-                <label for="godiste_do">Godište do:</label>
-                <label for="kilometraza">Kilometraža:</label>
-            </div>
-            <div class="pretraga">
-                <input type="number" id="cena_od" name="cena_od" min="0">
-                <input type="number" id="cena_do" name="cena_do" min="0">
-                <input type="number" id="godiste_od" name="godiste_od" min="1900" max="2024">
-                <input type="number" id="godiste_do" name="godiste_do" min="1900" max="2024">
-                <input type="number" id="kilometraza" name="kilometraza" min="0">
+                <div>
+                    <label for="cena_od">Cena od:</label>
+                    <input type="number" id="cena_od" name="cena_od" min="0">
+                </div>
+                <div>
+                    <label for="cena_do">Cena do:</label>
+                    <input type="number" id="cena_do" name="cena_do" min="0">
+                </div>
+                <div>
+                    <label for="godiste_od">Godište od:</label>
+                    <input type="number" id="godiste_od" name="godiste_od" min="1900" max="2024">
+                </div>
+                <div>
+                    <label for="godiste_do">Godište do:</label>
+                    <input type="number" id="godiste_do" name="godiste_do" min="1900" max="2024">
+                </div>
+                <div>
+                    <label for="kilometraza">Kilometraža:</label>
+                    <input type="number" id="kilometraza" name="kilometraza" min="0">
+                </div>
             </div>
             <div class="pretraga">
                 <button type="submit">Pretraži</button>
