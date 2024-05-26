@@ -66,4 +66,4 @@ def kategorija(id):
     oglasi = db.execute("SELECT * FROM oglas WHERE kategorija_id = ?", (id,)).fetchall()
     return render_template("index.html", oglasi=oglasi)
 
-""""
+"""
