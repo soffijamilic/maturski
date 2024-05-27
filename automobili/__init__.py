@@ -28,39 +28,22 @@ def create_app(test_config=None):
     from . import db
     db.init_app(app)
 
-    from . import auth
-    app.register_blueprint(auth.bp)
+    from . import oglas
+    app.register_blueprint(oglas.bp)
+    
     app.config['LOGO_FOLDER'] = 'static/slike'
     
     @app.route('/')
     def home():
         #print("Home URL:", request.url)
         marke=get_db().execute('SELECT * FROM marka')
-        return render_template('home.html',marke=marke)
+        modeli=get_db().execute('SELECT * FROM model WHERE id_marke=marke{id}')
+        goriva=get_db().execute('SELECT * FROM gorivo')
+        return render_template('home.html',marke=marke,modeli=modeli,goriva=goriva)
 
 
 
     return app
-
-
-
-
-"""@app.route('/honda')
-def honda():
-    #print("Honda URL:", request.url)
-    return render_template('honda.html')
-
-@app.route('/toyota')
-def toyota():
-    #print("Toyota URL:", request.url)
-    return render_template('toyota.html')
-
-@app.route('/mazda')
-def mazda():
-    #print("Mazda URL:", request.url)
-    return render_template('mazda.html')"""
-
-
 
 if __name__ == '__main__':
     app.run(debug=True)

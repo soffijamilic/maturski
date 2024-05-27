@@ -43,19 +43,17 @@
                 <div>
                     <label for="model">Model vozila:</label>
                     <select id="model" name="model">
-                        <option value="">Izaberite model</option>
+                        {%for model in modeli%}
+                         <option value="{{model['id']}}">{{model['naziv']}}</option>
+                        {%endfor%}
                     </select>
                 </div>
                 <div>
                     <label for="gorivo">Vrsta goriva:</label>
                     <select id="gorivo" name="gorivo">
-                        <option value="">Izaberite vrstu goriva</option>
-                        <option value="1">Dizel</option>
-                        <option value="2">Benzin</option>
-                        <option value="3">Elektricni pogon</option>
-                        <option value="4">Hibridni pogon</option>
-                        <option value="5">Benzin + Gas (TNG)</option>
-                        <option value="6">Benzin + Metan (CNG)</option>
+                        {%for gorivo in goriva%}
+                        <option value="{{gorivo['id']}}">{{gorivo['naziv']}}</option>
+                       {%endfor%}
                     </select>
                 </div>
                 <div>
