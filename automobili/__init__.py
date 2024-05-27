@@ -1,5 +1,6 @@
 import os
-from flask import Flask
+from flask import Flask,render_template,request
+from .db import get_db
 
 
 def create_app(test_config=None):
@@ -9,6 +10,7 @@ def create_app(test_config=None):
         SECRET_KEY='dev',
         DATABASE=os.path.join(app.instance_path, 'maturski.sqlite'),
     )
+    
 
     if test_config is None:
         # load the instance config, if it exists, when not testing
@@ -23,48 +25,43 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    # a simple page that says hello
     from . import db
     db.init_app(app)
-    return app
 
-"""from flask import Flask, render_template
-import os
-
-from oglasi.db import get_db
-
-
-def create_app():
-    app = Flask(__name__, instance_relative_config=True)
-    
-    app.config.from_mapping(
-        SECRET_KEY='0140d7e9-6189-4d9b-8d20-7d7e067bf11e',
-        DATABASE=os.path.join(app.instance_path, 'oglasi.sqlite'),
-    )
-
-    
-    try:
-        os.makedirs(app.instance_path)
-    except OSError:
-        pass
-
-    from . import db
-    db.init_app(app)
-    
-    from . import auth, oglas
+    from . import auth
     app.register_blueprint(auth.bp)
-    app.register_blueprint(oglas.bp)
-    app.add_url_rule('/', endpoint='index')
-    @app.route("/heartbeat", methods=["GET"])
-    def heartbeat():
-        return "OK", 200
+    app.config['LOGO_FOLDER'] = 'static/slike'
+    
+    @app.route('/')
+    def home():
+        #print("Home URL:", request.url)
+        marke=get_db().execute('SELECT * FROM marka')
+        return render_template('home.html',marke=marke)
 
-    @app.route("/", methods=["GET"])
-    def index():
-        db = get_db()
-        oglasi = db.execute("SELECT * FROM oglas JOIN kategorija ON oglas.kategorija_id = kategorija.id").fetchall()
-        print(oglasi[0]['naziv'])
-        return render_template("oglas/index.html", oglasi=oglasi)
+
+
     return app
 
-"""
+
+
+
+"""@app.route('/honda')
+def honda():
+    #print("Honda URL:", request.url)
+    return render_template('honda.html')
+
+@app.route('/toyota')
+def toyota():
+    #print("Toyota URL:", request.url)
+    return render_template('toyota.html')
+
+@app.route('/mazda')
+def mazda():
+    #print("Mazda URL:", request.url)
+    return render_template('mazda.html')"""
+
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
+

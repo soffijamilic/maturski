@@ -44,7 +44,8 @@ CREATE TABLE model (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   naziv TEXT NOT NULL,
   id_marke INTEGER NOT NULL,
-  FOREIGN KEY (id_marke) REFERENCES marka (id)
+  id_tipa INTEGER NOT NULL,
+  FOREIGN KEY (id_marke) REFERENCES marka (id),
   FOREIGN KEY (id_tipa) REFERENCES tip_vozila (id)
 );
 
@@ -111,7 +112,7 @@ INSERT INTO gorivo (naziv)
 VALUES 
    ('Dizel'),
    ('Benzin'),
-   ('Elektricni pogon')
+   ('Elektricni pogon'),
    ('Hibridni pogon'),
    ('Benzin + Gas (TNG)'),
    ('Benzin + Metan (CNG)');
