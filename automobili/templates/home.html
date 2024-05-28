@@ -13,6 +13,7 @@
         <a href="{{ url_for('home') }}">
             <img src="{{ url_for('static', filename='loggo.png') }}" class="logo" alt="Prodaja Polovnih Automobila">
         </a>  
+        <a href=""></a>
         </nav>
 <section class="content">
     <header>
@@ -36,7 +37,7 @@
     <br>
     <div class="formapretrage">
         <h2>Pretraga Automobila</h2>
-        <form action="/search" method="GET">
+        <form action="/search" method="GET" method="GET" action="{{ url_for('oglas.search') }}">
             <div class="pretraga">
                 <div>
                     <label for="marka">Marka vozila:</label>
@@ -114,6 +115,41 @@
             </div>
         </form>
     </div>
+    <div id="rezultati">
+        {% if oglasi %}
+            {% for oglas in oglasi %}
+            <div class="card">
+                <h2>{{ oglas['title'] }}</h2>
+                <p>{{ oglas['body'] }}</p>
+                <p><strong>Cena:</strong> {{ oglas['cena'] }} RSD</p>
+                <p><strong>Kilometraža:</strong> {{ oglas['kilometraza'] }} km</p>
+                <p><strong>Godište:</strong> {{ oglas['godiste'] }}</p>
+            </div>
+            {% endfor %}
+        {% else %}
+            <p>Nema rezultata za prikaz.</p>
+        {% endif %}
+    </div>
+
+    <script>
+        document.getElementById('marka').addEventListener('change', function() {
+            const markaId = this.value;
+            if (markaId) {
+                fetch(`/get_models/${markaId}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        const modelSelect = document.getElementById('model');
+                        modelSelect.innerHTML = '<option value="">Izaberite model</option>';
+                        data.forEach(model => {
+                            const option = document.createElement('option');
+                            option.value = model.id;
+                            option.textContent = model.naziv;
+                            modelSelect.appendChild(option);
+                        });
+                    });
+            }
+        });
+    </script>
 </body>
 </html>
     <br>

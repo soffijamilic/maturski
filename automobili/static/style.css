@@ -82,7 +82,7 @@ form {
     background: #e0ecf8;
     padding: 20px 40px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -170,7 +170,7 @@ h3{
     text-decoration: underline;
 }
 #vratinavrh {
-    background-color: #007bff;
+    background-color: #99c0e4;
     color: black;
     border: 0px;
     border-radius: 20px;
@@ -183,5 +183,5 @@ h3{
 }
 
 #vratinavrh:hover {
-    background-color: #0056b3;
+    background-color: #3f5d7d;
 }

@@ -31,6 +31,23 @@ def search():
     if cena_od is not "":
         upit+=f' AND cena>={cena_od}'
 
-    print (upit)
-    results=get_db().execute(upit).fetchall()
-    return render_template('home.html',oglasi=results)
+    cena_do = request.args.get('cena_do')
+    if cena_do:
+        upit += f' AND cena <= {cena_do}'
+
+    godiste_od = request.args.get('godiste_od')
+    if godiste_od:
+        upit += f' AND godiste >= {godiste_od}'
+
+    godiste_do = request.args.get('godiste_do')
+    if godiste_do:
+        upit += f' AND godiste <= {godiste_do}'
+
+    kilometraza = request.args.get('kilometraza')
+    if kilometraza:
+        upit += f' AND kilometraza <= {kilometraza}'
+
+    print(upit)
+    db = get_db()
+    results = db.execute(upit).fetchall()
+    return render_template('home.html', oglasi=results)

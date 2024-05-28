@@ -4,11 +4,11 @@
 
  {% endblock %} {% block content %} 
 {% if g.user %}
-<a
+<!--<a
     href="{{url_for('oglas.create')}}"
     class="action"
     >Dodaj Oglas</a
->
+>-->
 {% endif %}
 {% for oglas in oglasi %}
 <article class="post">
