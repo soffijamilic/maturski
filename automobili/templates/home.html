@@ -28,6 +28,12 @@
     <br>
     <br>
     <br>
+    <div class="pozadina">
+        <img src="static/slike/pic.png" alt="">
+    </div>
+    <br>
+    <br>
+    <br>
     <div class="formapretrage">
         <h2>Pretraga Automobila</h2>
         <form action="/search" method="GET">
@@ -35,6 +41,7 @@
                 <div>
                     <label for="marka">Marka vozila:</label>
                     <select id="marka" name="marka">
+                        <option value="">Izaberite marku</option>
                       {%for marka in marke%}
                       <option value="{{marka['id']}}">{{marka['naziv']}}</option>
                       {%endfor%}
@@ -43,6 +50,7 @@
                 <div>
                     <label for="model">Model vozila:</label>
                     <select id="model" name="model">
+                        <option value="">Izaberite model</option>
                         {%for model in modeli%}
                          <option value="{{model['id']}}">{{model['naziv']}}</option>
                         {%endfor%}
@@ -51,21 +59,31 @@
                 <div>
                     <label for="gorivo">Vrsta goriva:</label>
                     <select id="gorivo" name="gorivo">
+                        <option value="">Izaberite gorivo</option>
                         {%for gorivo in goriva%}
                         <option value="{{gorivo['id']}}">{{gorivo['naziv']}}</option>
                        {%endfor%}
                     </select>
                 </div>
+                
                 <div>
                     <label for="tip_vozila">Tip vozila:</label>
                     <select id="tip_vozila" name="tip_vozila">
                         <option value="">Izaberite tip vozila</option>
+                        {%for tip_vozila in tipovi_vozila%}
+                        <option value="{{tip_vozila['id']}}">{{tip_vozila['naziv']}}</option>
+                       {%endfor%}
                     </select>
                 </div>
+
                 <div>
-                    <label for="pogon">Pogon:</label>
-                    <select id="pogon" name="pogon">
-                        <option value="">Izaberite pogon</option>
+                    <label for="menjac">Menjac:</label>
+                    <select id="menjac" name="menjac">
+                        <option value="">Izaberite menjac</option>
+                        {%for menjac in menjaci%}
+                        <option value="{{menjac['id']}}">{{menjac['naziv']}}</option>
+                       {%endfor%}
+                        
                     </select>
                 </div>
             </div>

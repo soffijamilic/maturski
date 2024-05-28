@@ -37,14 +37,12 @@ def create_app(test_config=None):
     def home():
         #print("Home URL:", request.url)
         marke=get_db().execute('SELECT * FROM marka')
-        modeli=get_db().execute('SELECT * FROM model WHERE id_marke=marke{id}')
+        """modeli=get_db().execute('SELECT * FROM model WHERE id_marke=marke{id}')"""
         goriva=get_db().execute('SELECT * FROM gorivo')
-        return render_template('home.html',marke=marke,modeli=modeli,goriva=goriva)
-
-
-
+        tipovi_vozila=get_db().execute('SELECT * FROM tip_vozila')
+        menjaci=get_db().execute('SELECT * FROM menjac')
+        return render_template('home.html',marke=marke,goriva=goriva,tipovi_vozila=tipovi_vozila,menjaci=menjaci)
+        
     return app
 
-if __name__ == '__main__':
-    app.run(debug=True)
 
