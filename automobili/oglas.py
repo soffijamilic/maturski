@@ -18,11 +18,6 @@ def search():
     if gorivo is not None:
         upit+= f' AND id_goriva = {gorivo}'
 
-
-    tip_vozila=request.args.get('tip_vozila')
-    if tip_vozila is not None:
-        upit+= f' AND id_tipa = {tip_vozila}'
-
     menjac=request.args.get('menjac')
     if menjac is not None:
         upit+= f' AND id_menjaca = {menjac}'
@@ -43,9 +38,6 @@ def search():
     if godiste_do:
         upit += f' AND godiste <= {godiste_do}'
 
-    kilometraza = request.args.get('kilometraza')
-    if kilometraza:
-        upit += f' AND kilometraza <= {kilometraza}'
 
     print(upit)
     db = get_db()
