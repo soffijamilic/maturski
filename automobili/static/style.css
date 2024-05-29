@@ -32,7 +32,7 @@ header{
 }
 .navbar{
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
     align-items: center;
     background-color:#99c0e4;/* #F39C12;#7F8C8D  zelenkasta*/
     color: white;
@@ -42,10 +42,35 @@ header{
     height: 94px;
    /* box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);*/
 }
+.linkovi {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+   
+}
+
+.linkovi li {
+    display: inline;
+    margin-right: 9px;
+}
+
+.linkovi a {
+    text-decoration: none;
+    color: rgb(0, 0, 0); /* Boja teksta linkova */
+    font-size: 18px;
+    font-size: larger;
+    padding: 10px 15px; /* Prostor unutar linkova */
+    transition: background-color 0.3s; /* Glatka tranzicija za hover efekat */
+}
+
+.linkovi a:hover {
+    background-color: #8db1d2; /* Hover efekat */
+}
+
 h1{
     font-family: Arial, Helvetica, sans-serif;
-    
-    
 }
 .logo{
     height: 70px;
@@ -146,27 +171,27 @@ footer {
 h3{
     font-size: larger;
 }
-.contact-info, .location-info, .legal-info {
+#contact-info, .location-info, .legal-info {
     flex: 1;
     margin-right: 20px;
 }
 
-.contact-info ul {
+#contact-info ul {
     list-style-type: none;
     padding: 0;
 }
 
-.contact-info ul li {
+#contact-info ul li {
     display: inline-block;
     margin-right: 10px;
 }
 
-.contact-info ul li a {
+#contact-info ul li a {
     color: #fff;
     text-decoration: none;
 }
 
-.contact-info ul li a:hover {
+#contact-info ul li a:hover {
     text-decoration: underline;
 }
 #vratinavrh {

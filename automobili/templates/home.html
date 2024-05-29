@@ -13,8 +13,12 @@
         <a href="{{ url_for('home') }}">
             <img src="{{ url_for('static', filename='loggo.png') }}" class="logo" alt="Prodaja Polovnih Automobila">
         </a>  
-        <a href=""></a>
-        </nav>
+        <ul class="linkovi">
+            <li><a href="#contact-info">Contact</a></li>
+            <li><a href="#o-nama">O nama</a></li>
+           <li><a href="#pronadji">Pronadji auto</a></li>
+        </ul>
+    </nav>
 <section class="content">
     <header>
         {% block header %}{% endblock %}
@@ -33,8 +37,7 @@
         <img src="static/slike/pic.png" alt="">
     </div>
     <br>
-    <br>
-    <br>
+    <br id="pronadji">
     <div class="formapretrage">
         <h2>Pretraga Automobila</h2>
         <form action="/search" method="GET" method="GET" action="{{ url_for('oglas.search') }}">
@@ -173,7 +176,7 @@
     <br>
     <br>
     <br>
-    <p>neki tekst</p>
+    <h2 id="o-nama">O nama</h2>
     
 <script>
     window.onscroll = function() {scrollFunction()};
@@ -201,7 +204,7 @@
   </svg></button>
   
 <footer>
-    <div class="contact-info">
+    <div id="contact-info">
         <h3>Contact</h3>
         <p>Email: example@example.com</p>
         <p>Phone: 123-456-7890</p>
