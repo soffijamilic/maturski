@@ -41,17 +41,18 @@ def create_app(test_config=None):
         goriva=get_db().execute('SELECT * FROM gorivo')
         tipovi_vozila=get_db().execute('SELECT * FROM tip_vozila')
         menjaci=get_db().execute('SELECT * FROM menjac')
-        oglasi=[
-            {
-                'id':1,
-                'title':'VW Golf',
-                'body':'VW Golf 1.6 TDI',
-                'cena': 3000,
-                'godiste': 2005,
-                'kilometraza': 150000,
-            }
-        ]
-        #oglasi = search()
+        # oglasi=[
+        #     {
+        #         'id':1,
+        #         'title':'VW Golf',
+        #         'body':'VW Golf 1.6 TDI',
+        #         'cena': 3000,
+        #         'godiste': 2005,
+        #         'kilometraza': 150000,
+        #     }
+        # ]
+        oglasi = search()
+        print(oglasi)
         return render_template('home.html',marke=marke,goriva=goriva,tipovi_vozila=tipovi_vozila,menjaci=menjaci,oglasi=oglasi)
         
     return app

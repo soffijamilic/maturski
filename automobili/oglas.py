@@ -3,48 +3,48 @@ from .db import get_db
 bp = Blueprint("oglas", __name__)
 
 
-
+@bp.route("/search", methods=['GET'])
 def search():
     upit = "SELECT * FROM oglas WHERE 1 = 1"
     marka=request.args.get('marka')
-    if marka is not None:
+    if marka not in [None, ""]:
         upit+= f' AND id_marke = {marka}'
 
     model=request.args.get('model')
-    if model is not None:
+    if model not in [None, ""]:
         upit+= f' AND id_modela = {model}'
 
     gorivo=request.args.get('gorivo')
-    if gorivo is not None:
+    if gorivo not in [None, ""]:
         upit+= f' AND id_goriva = {gorivo}'
 
 
     tip_vozila=request.args.get('tip_vozila')
-    if tip_vozila is not None:
+    if tip_vozila not in [None, ""]:
         upit+= f' AND id_tipa = {tip_vozila}'
 
     menjac=request.args.get('menjac')
-    if menjac is not None:
+    if menjac not in [None, ""]:
         upit+= f' AND id_menjaca = {menjac}'
 
     cena_od=request.args.get('cena_od')
-    if cena_od is not "":
+    if cena_od not in [None, ""]:
         upit+=f' AND cena>={cena_od}'
 
     cena_do = request.args.get('cena_do')
-    if cena_do:
+    if cena_do not in [None, ""]:
         upit += f' AND cena <= {cena_do}'
 
     godiste_od = request.args.get('godiste_od')
-    if godiste_od:
+    if godiste_od not in [None, ""]:
         upit += f' AND godiste >= {godiste_od}'
 
     godiste_do = request.args.get('godiste_do')
-    if godiste_do:
+    if godiste_do not in [None, ""]:
         upit += f' AND godiste <= {godiste_do}'
 
     kilometraza = request.args.get('kilometraza')
-    if kilometraza:
+    if kilometraza not in [None, ""]:
         upit += f' AND kilometraza <= {kilometraza}'
 
     print(upit)

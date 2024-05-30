@@ -40,7 +40,7 @@
     <br id="pronadji">
     <div class="formapretrage">
         <h2>Pretraga Automobila</h2>
-        <form action="/search" method="GET" method="GET" action="{{ url_for('oglas.search') }}">
+        <form action="/" method="GET">
             <div class="pretraga">
                 <div>
                     <label for="marka">Marka vozila:</label>
@@ -70,7 +70,7 @@
                     </select>
                 </div>
                 
-                <div>
+                <!-- <div>
                     <label for="tip_vozila">Tip vozila:</label>
                     <select id="tip_vozila" name="tip_vozila">
                         <option value="">Izaberite tip vozila</option>
@@ -78,7 +78,7 @@
                         <option value="{{tip_vozila['id']}}">{{tip_vozila['naziv']}}</option>
                        {%endfor%}
                     </select>
-                </div>
+                </div> -->
 
                 <div>
                     <label for="menjac">Menjac:</label>
@@ -108,10 +108,10 @@
                     <label for="godiste_do">Godište do:</label>
                     <input type="number" id="godiste_do" name="godiste_do" min="1900" max="2024">
                 </div>
-                <div>
+                <!-- <div>
                     <label for="kilometraza">Kilometraža:</label>
                     <input type="number" id="kilometraza" name="kilometraza" min="0">
-                </div>
+                </div> -->
             </div>
             <div class="pretraga">
                 <button type="submit">Pretraži</button>
