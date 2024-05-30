@@ -71,8 +71,6 @@
                             {% endif %}
                         {% endfor %}
                     </select>
-
-                    
                 </div>
                 <div>
                     <label for="gorivo">Vrsta goriva:</label>
@@ -103,13 +101,23 @@
                     <label for="cena_do">Cena do:</label>
                     <input type="number" id="cena_do" name="cena_do" min="0">
                 </div>
-                <div>
+
                     <label for="godiste_od">Godište od:</label>
-                    <input type="number" id="godiste_od" name="godiste_od" min="1900" max="2024">
+                    <select id="godiste" name="godiste">
+                        <option value="">Izaberite gorivo</option>
+                        {%for godiste in godista%}
+                        <option value="{{godiste['id']}}">{{godiste['godina']}}</option>
+                       {%endfor%}
+                    </select>
                 </div>
                 <div>
                     <label for="godiste_do">Godište do:</label>
-                    <input type="number" id="godiste_do" name="godiste_do" min="1900" max="2024">
+                    <select id="godiste" name="godiste">
+                        <option value="">Izaberite gorivo</option>
+                        {%for godiste in godista%}
+                        <option value="{{godiste['id']}}">{{godiste['godina']}}</option>
+                       {%endfor%}
+                    </select>
                 </div>
             </div>
             <div class="pretraga">
@@ -132,26 +140,6 @@
             <p>Nema rezultata za prikaz.</p>
         {% endif %}
     </div>
-
-    <script>
-        document.getElementById('marka').addEventListener('change', function() {
-            const markaId = this.value;
-            if (markaId) {
-                fetch(`/get_models/${markaId}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        const modelSelect = document.getElementById('model');
-                        modelSelect.innerHTML = '<option value="">Izaberite model</option>';
-                        data.forEach(model => {
-                            const option = document.createElement('option');
-                            option.value = model.id;
-                            option.textContent = model.naziv;
-                            modelSelect.appendChild(option);
-                        });
-                    });
-            }
-        });
-    </script>
 </body>
 </html>
     <br>

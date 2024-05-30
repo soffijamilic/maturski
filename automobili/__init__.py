@@ -40,9 +40,12 @@ def create_app(test_config=None):
         modeli=get_db().execute('SELECT * FROM model')
         goriva=get_db().execute('SELECT * FROM gorivo')
         menjaci=get_db().execute('SELECT * FROM menjac')
+        ''' godiste_od = request.form.get('godiste_od')
+        godiste_do = request.form.get('godiste_do')'''
+        godista= get_db().execute('SELECT * FROM godiste')
         selected_marka = request.args.get('marka')
 
-        return render_template('home.html',marke=marke,modeli=modeli,goriva=goriva,menjaci=menjaci,selected_marka=selected_marka)
+        return render_template('home.html',marke=marke,modeli=modeli,goriva=goriva,menjaci=menjaci,godista=godista,selected_marka=selected_marka)
         
     return app
 

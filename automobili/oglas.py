@@ -30,13 +30,13 @@ def search():
     if cena_do:
         upit += f' AND cena <= {cena_do}'
 
-    godiste_od = request.args.get('godiste_od')
-    if godiste_od:
-        upit += f' AND godiste >= {godiste_od}'
+    godiste= request.args.get('godiste')
+    if godiste:
+        upit += f' AND godiste >= {godiste}'
 
-    godiste_do = request.args.get('godiste_do')
+    ''' godiste_do = request.args.get('godiste_do')
     if godiste_do:
-        upit += f' AND godiste <= {godiste_do}'
+        upit += f' AND godiste <= {godiste_do}'''
 
 
     print(upit)
