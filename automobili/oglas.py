@@ -3,7 +3,7 @@ from .db import get_db
 bp = Blueprint("oglas", __name__)
 
 
-@bp.route('/search', methods=['GET'])
+
 def search():
     upit = "SELECT * FROM oglas WHERE 1 = 1"
     marka=request.args.get('marka')
@@ -50,4 +50,13 @@ def search():
     print(upit)
     db = get_db()
     results = db.execute(upit).fetchall()
-    return render_template('home.html', oglasi=results)
+    return results
+
+@bp.route("/get_models/<int:id>", methods=['GET'])
+def get_models(id):
+    models = get_db().execute(
+        "SELECT mo.id as id, mo.naziv as naziv FROM model mo JOIN marka ma ON ma.id = mo.id_marke WHERE ma.id = ?", (id,)
+    ).fetchall()
+    for m in models:
+        print(m)
+    return models

@@ -21,7 +21,7 @@ CREATE TABLE oglas (
   body TEXT NOT NULL,
   cena INTEGER NOT NULL,
   kilometraza INTEGER NOT NULL,
-  godiste INTEGER NOT NULL,
+  godiste INTEGER NOT NULL, 
   id_marke INTEGER NOT NULL,
   id_modela INTEGER NOT NULL,
   id_goriva INTEGER NOT NULL,
