@@ -60,3 +60,9 @@ def get_models(id):
     for m in models:
         print(m)
     return models
+
+@bp.route('/view<int:author_id>',methods=['GET'])
+def view(author_id):
+    db=get_db()
+    vozila=db.execute('SELECT * FROM oglas WHERE id=?',(author_id)).fetchall
+    return render_template('view.html',oglas=vozila)

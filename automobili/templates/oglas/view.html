@@ -1,14 +1,14 @@
 {% extends "home.html" %}
 
 {% block header %}
-<h1>{% block title %}{{ oglas['naslov'] }}{% endblock %}</h1>
+<h1>{% block title %}{{ oglas['title'] }}{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
 <div class="card">
-    <h2>{{ oglas['naslov'] }}</h2>
+    <h1>{{ oglas['title'] }}</h1>
     <p>{{ oglas['body'] }}</p>
-    <p><strong>Cena:</strong> {{ oglas['cena'] }} RSD</p>
+    <p><strong>Cena:</strong> {{ oglas['cena'] }} €</p>
     <p><strong>Kilometraža:</strong> {{ oglas['kilometraza'] }} km</p>
     <p><strong>Godište:</strong> {{ oglas['godiste'] }}</p>
 </div>
