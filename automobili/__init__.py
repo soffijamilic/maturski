@@ -1,7 +1,7 @@
 import os
 from flask import Flask,render_template,request
 from .db import get_db
-from .oglas import search
+from .oglas import search,bp
 
 def create_app(test_config=None):
     # create and configure the app
