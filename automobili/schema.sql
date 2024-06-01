@@ -98,30 +98,29 @@ INSERT INTO model (naziv, id_marke, id_tipa) VALUES
   ('Tacoma', 1, 5),   
   ('C-HR', 1, 3),     
 
-  -- Mazda modeli
-  ('Mazda3', 2, 1),   
-  ('Mazda6', 2, 2),   
-  ('CX-3', 2, 3),     
-  ('CX-5', 2, 3),     
-  ('CX-9', 2, 3),     
-  ('Mazda2', 2, 1),   
-  ('CX-30', 2, 3),    
-  ('MX-30', 2, 4),    
-  ('CX-7', 2, 3),     
-  ('B-Series', 2, 5), 
+  -- Honda modeli 
+  ('Civic', 2, 1),    
+  ('Accord', 2, 2),   
+  ('CR-V', 2, 3),     
+  ('Pilot', 2, 3),    
+  ('Fit (Jazz)', 2, 1), 
+  ('HR-V', 2, 3),     
+  ('Insight', 2, 4),  
+  ('Passport', 2, 3), 
+  ('Ridgeline', 2, 5), 
+  ('Clarity', 2, 4),  
 
-  -- Honda modeli
-  ('Civic', 3, 1),    
-  ('Accord', 3, 2),   
-  ('CR-V', 3, 3),     
-  ('Pilot', 3, 3),    
-  ('Fit (Jazz)', 3, 1), 
-  ('HR-V', 3, 3),     
-  ('Insight', 3, 4),  
-  ('Passport', 3, 3), 
-  ('Ridgeline', 3, 5), 
-  ('Clarity', 3, 4);  
-   
+  -- Mazda modeli 
+  ('Mazda3', 3, 1),   
+  ('Mazda6', 3, 2),   
+  ('CX-3', 3, 3),     
+  ('CX-5', 3, 3),     
+  ('CX-9', 3, 3),     
+  ('Mazda2', 3, 1),   
+  ('CX-30', 3, 3),    
+  ('MX-30', 3, 4),    
+  ('CX-7', 3, 3),     
+  ('B-Series', 3, 5);
 
 INSERT INTO gorivo (naziv)
 VALUES 
