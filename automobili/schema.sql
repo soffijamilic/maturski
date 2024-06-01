@@ -69,15 +69,14 @@ INSERT INTO oglas (author_id, title, body, cena, kilometraza, godiste, id_marke,
 (1, 'Prodajem Toyotu Camry', 'Odličan porodični auto.', 7000, 90000, 2016, 1, 2, 2, 2, 2),
 (2, 'Prodajem Toyotu RAV4', 'Sjajan SUV za sve terene.', 12000, 80000, 2018, 1, 3, 1, 3, 2),
 (2, 'Prodajem Toyotu Prius', 'Ekonomičan i ekološki prihvatljiv.', 8000, 70000, 2017, 1, 4, 4, 4, 2),
-(1, 'Prodajem Hondu Civic', 'Mala potrošnja, odličan gradski auto.', 6000, 110000, 2014, 3, 1, 2, 1, 1),
-(1, 'Prodajem Hondu Accord', 'Pouzdan i udoban.', 9000, 95000, 2015, 3, 2, 1, 2, 2),
-(2, 'Prodajem Hondu CR-V', 'Prostran SUV, odličan za porodicu.', 13000, 85000, 2019, 3, 3, 2, 3, 2),
-(2, 'Prodajem Hondu Pilot', 'Odličan SUV sa mnogo prostora.', 14000, 75000, 2018, 3, 4, 1, 3, 2),
-(1, 'Prodajem Mazdu Mazda3', 'Pouzdan gradski auto.', 5500, 105000, 2014, 2, 1, 2, 1, 1),
-(1, 'Prodajem Mazdu CX-5', 'Sjajan SUV sa niskom potrošnjom.', 12500, 70000, 2017, 2, 4, 1, 3, 2),
-(2, 'Prodajem Mazdu CX-9', 'Veliki SUV, odličan za duge vožnje.', 15000, 60000, 2019, 2, 5, 1, 3, 2),
-(2, 'Prodajem Mazdu MX-30', 'Električni SUV sa naprednom tehnologijom.', 20000, 30000, 2020, 2, 6, 3, 4, 2);
-
+(1, 'Prodajem Hondu Civic', 'Mala potrošnja, odličan gradski auto.', 6000, 110000, 2014, 2, 1, 2, 1, 1), -- id_marke promenjen sa 3 na 2
+(1, 'Prodajem Hondu Accord', 'Pouzdan i udoban.', 9000, 95000, 2015, 2, 2, 1, 2, 2), -- id_marke promenjen sa 3 na 2
+(2, 'Prodajem Hondu CR-V', 'Prostran SUV, odličan za porodicu.', 13000, 85000, 2019, 2, 3, 2, 3, 2), -- id_marke promenjen sa 3 na 2
+(2, 'Prodajem Hondu Pilot', 'Odličan SUV sa mnogo prostora.', 14000, 75000, 2018, 2, 4, 1, 3, 2), -- id_marke promenjen sa 3 na 2
+(1, 'Prodajem Mazdu Mazda3', 'Pouzdan gradski auto.', 5500, 105000, 2014, 3, 1, 2, 1, 1), -- id_marke promenjen sa 2 na 3
+(1, 'Prodajem Mazdu CX-5', 'Sjajan SUV sa niskom potrošnjom.', 12500, 70000, 2017, 3, 4, 1, 3, 2), -- id_marke promenjen sa 2 na 3
+(2, 'Prodajem Mazdu CX-9', 'Veliki SUV, odličan za duge vožnje.', 15000, 60000, 2019, 3, 5, 1, 3, 2), -- id_marke promenjen sa 2 na 3
+(2, 'Prodajem Mazdu MX-30', 'Električni SUV sa naprednom tehnologijom.', 20000, 30000, 2020, 3, 6, 3, 4, 2); -- id_marke promenjen sa 2 na 3
 
 INSERT INTO marka (naziv)
 VALUES 
