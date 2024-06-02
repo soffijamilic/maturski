@@ -15,7 +15,7 @@
         </a>  
         <ul class="linkovi">
             <li><a href="#contact-info">Contact</a></li>
-            <li><a href="#o-nama">O nama</a></li>
+            <li><a href="#ponude">Ponude</a></li>
            <li><a href="#pronadji">Pronadji auto</a></li>
         </ul>
     </nav>
@@ -119,16 +119,28 @@
             </div>
         </form>
     </div>
+
+    <div class="slike">
+        <img src="{{ url_for('static', filename='slike/toyota.png') }}" alt="Toyota">
+        <img src="{{ url_for('static', filename='slike/honda.png') }}" alt="Honda">
+        <img src="{{ url_for('static', filename='slike/mazda.png') }}" alt="Mazda">
+    </div>
+    
+    <div>
+        <h1 id="ponude">Pogledajte neke od naši ponuda.</h1>
+    </div>
     <div id="rezultati">
         {% if oglasi %}
             {% for oglas in oglasi %}
-            <div class="card">
-                <h2>{{ oglas['title'] }}</h2>
-                <p>{{ oglas['body'] }}</p>
-                <p><strong>Cena:</strong> {{ oglas['cena'] }} €</p>
-                <p><strong>Kilometraža:</strong> {{ oglas['kilometraza'] }} km</p>
-                <p><strong>Godište:</strong> {{ oglas['godiste'] }}</p>
-            </div>
+                <a href="{{ url_for('oglas.view', id=oglas['id']) }}">
+                    <div class="card">
+                        <h2>{{ oglas['title'] }}</h2>
+                        <p>{{ oglas['body'] }}</p>
+                        <p><strong>Cena:</strong> {{ oglas['cena'] }} €</p>
+                        <p><strong>Kilometraža:</strong> {{ oglas['kilometraza'] }} km</p>
+                        <p><strong>Godište:</strong> {{ oglas['godiste'] }}</p>
+                    </div>
+                </a>
             {% endfor %}
         {% else %}
             <p>Nema rezultata za prikaz.</p>
@@ -175,18 +187,6 @@
     <br>
     <br>
     <br>
-    <br>
-    <div class="info">
-        <h2 id="o-nama">O nama</h2>
-        <p>Dobrodošli na našu stranicu posvećenu ljubiteljima automobila! 
-            Specijalizovani smo za prodaju visokokvalitetnih olovnih modela automobila marki 
-            Toyota, Mazda i Honda. Naša strast prema automobilima i posvećenost detaljima garantuju 
-            autentičnost i vrhunski kvalitet svakog modela u našoj ponudi. Bilo da ste kolekcionar ili
-            ljubitelj automobila, kod nas ćete pronaći savršene modele koji verno oslikavaju originalne automobile. 
-            Hvala što ste posetili našu stranicu i radujemo se prilici da vam pomognemo da proširite svoju kolekciju.</p>
-    </div>
-    
-    
 <script>
     window.onscroll = function() {scrollFunction()};
 

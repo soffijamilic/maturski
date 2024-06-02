@@ -61,8 +61,8 @@ def get_models(id):
         print(m)
     return models
 
-@bp.route('/view<int:id>',methods=['GET'])
-def view(author_id):
+@bp.route('/view<int:id>')
+def view(id):
     db=get_db()
-    vozila=db.execute('SELECT * FROM oglas WHERE id=?',(id,)).fetchall()
-    return render_template('view.html',oglas=vozila)
+    oglas=db.execute('SELECT * FROM oglas WHERE id=?',(id,)).fetchone()
+    return render_template('oglas/view.html',oglas=oglas)

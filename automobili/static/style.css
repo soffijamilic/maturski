@@ -140,6 +140,34 @@ form {
 .pretraga button:hover {
     background-color: #218838;
 }
+#rezultati a {
+    text-decoration: none; /* Skida podvučak */
+}
+.oglas-link a {
+    text-decoration: none; 
+  }
+.card:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+#ponude{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px
+}
+.slike {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.slika {
+    width: 200px; /* promijeni vrijednost prema potrebi */
+    height: 200px; /* promijeni vrijednost prema potrebi */
+    margin: 20px; /* promijeni vrijednost prema potrebi */
+}
 footer {
     background-color:#39526d;;
     color: #fff;
