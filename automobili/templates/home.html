@@ -19,6 +19,15 @@
            <li><a href="#pronadji">Pronadji auto</a></li>
         </ul>
     </nav>
+<section class="content">
+    <header>
+        {% block header %}{% endblock %}
+    </header>
+    {% for message in get_flashed_messages() %}
+        <div class="flash">{{ message }}</div>
+    {% endfor %}
+    {% block content %}{% endblock %}
+</section>
     <div class="naslov">
          <h1>PRONADJITE AUTO ZA VAS!</h1>
     </div>
