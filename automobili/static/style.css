@@ -162,12 +162,6 @@ form {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
-.slika {
-    width: 200px; /* promijeni vrijednost prema potrebi */
-    height: 200px; /* promijeni vrijednost prema potrebi */
-    margin: 20px; /* promijeni vrijednost prema potrebi */
-}
 footer {
     background-color:#39526d;;
     color: #fff;

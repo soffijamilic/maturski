@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
+    {% block nav %}
     <nav class="navbar">
         <a href="{{ url_for('home') }}">
             <img src="{{ url_for('static', filename='loggo.png') }}" class="logo" alt="Prodaja Polovnih Automobila">
@@ -19,6 +20,7 @@
            <li><a href="#pronadji">Pronadji auto</a></li>
         </ul>
     </nav>
+    {% endblock %}
 <section class="content">
     <header>
         {% block header %}{% endblock %}
@@ -120,12 +122,12 @@
         </form>
     </div>
 
-    <div class="slike">
+    <!--<div class="slike">
         <img src="{{ url_for('static', filename='slike/toyota.png') }}" alt="Toyota">
         <img src="{{ url_for('static', filename='slike/honda.png') }}" alt="Honda">
         <img src="{{ url_for('static', filename='slike/mazda.png') }}" alt="Mazda">
-    </div>
-    
+    </div>-->
+
     <div>
         <h1 id="ponude">Pogledajte neke od naši ponuda.</h1>
     </div>
@@ -211,7 +213,8 @@
 <button id="vratinavrh" onclick="scrollToTop()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
   </svg></button>
-  
+
+{% block footer %}
 <footer>
     <div id="contact-info">
         <h3>Contact</h3>
@@ -236,6 +239,7 @@
         <p><a href="#">Terms of Use</a></p>
     </div>
 </footer>
+{% endblock %}
 </body>
 </html>
 

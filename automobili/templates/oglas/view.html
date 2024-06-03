@@ -1,10 +1,4 @@
-
-
 {% extends "home.html" %}
-
-{% block header %}
-<!--<h1>{{ oglas.title }}</h1>-->
-{% endblock %}
 
 {% block content %}
 <div class="card">
@@ -15,3 +9,6 @@
     <p><strong>Godište:</strong> {{ oglas.godiste }}</p>
 </div>
 {% endblock %}
+
+{% block navbar %}{% endblock %}  <!-- override and empty the navbar block -->
+{% block footer %}{% endblock %}  <!-- override and empty the footer block -->
