@@ -7,7 +7,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
 .pozadina {
     display: block;
     justify-content: space-between;
@@ -38,14 +37,11 @@ body{
     margin: 0;
     display: flex;
     justify-content: center;
-   
 }
-
 .linkovi li {
     display: inline;
     margin-right: 9px;
 }
-
 .linkovi a {
     text-decoration: none;
     color: rgb(0, 0, 0); 
@@ -54,11 +50,9 @@ body{
     padding: 10px 15px; 
     transition: background-color 0.3s; 
 }
-
 .linkovi a:hover {
     background-color: #8db1d2; 
 }
-
 .naslov{
     display: flex;
     font-family: Arial, Helvetica, sans-serif;
@@ -77,12 +71,10 @@ body{
     width: 70px;
     margin-left: 9px;
 }
-
 form {
     margin: 40px; 
     display: inline-block; 
 }
-
 .formapretrage {
     background: #e0ecf8;
     padding: 20px 40px;
@@ -92,25 +84,21 @@ form {
     display: flex;
     flex-direction: column;
 }
-
 .formapretrage h2 {
     margin-bottom: 20px;
     color: #333;
     text-align: center;
 }
-
 .pretraga {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 15px;
 }
-
 .pretraga div {
     width: 15%;
     margin-bottom: 15px;
 }
-
 .pretraga label {
     display: flex;
     margin-bottom: 5px;
@@ -124,7 +112,6 @@ form {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
-
 .pretraga button {
     width: 100px;
     padding: 10px 15px;
@@ -136,7 +123,6 @@ form {
     cursor: pointer;
     align-self: flex-end;
 }
-
 .pretraga button:hover {
     background-color: #218838;
 }
@@ -213,7 +199,6 @@ h3{
     right: 20px;
     display: none;
 }
-
 #vratinavrh:hover {
     background-color: #3f5d7d;
 }
