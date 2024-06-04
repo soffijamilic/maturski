@@ -37,10 +37,10 @@ def create_app(test_config=None):
     def home():
         #print("Home URL:", request.url)
         marke=get_db().execute('SELECT * FROM marka')
-        """modeli=get_db().execute('SELECT * FROM model WHERE id_marke=marke{id}')"""
+        modeli=get_db().execute('SELECT * FROM model')
         goriva=get_db().execute('SELECT * FROM gorivo')
-        tipovi_vozila=get_db().execute('SELECT * FROM tip_vozila')
         menjaci=get_db().execute('SELECT * FROM menjac')
+<<<<<<< HEAD
         # oglasi=[
         #     {
         #         'id':1,
@@ -54,6 +54,14 @@ def create_app(test_config=None):
         oglasi = search()
         print(oglasi)
         return render_template('home.html',marke=marke,goriva=goriva,tipovi_vozila=tipovi_vozila,menjaci=menjaci,oglasi=oglasi)
+=======
+        ''' godiste_od = request.form.get('godiste_od')
+        godiste_do = request.form.get('godiste_do')'''
+        godista= get_db().execute('SELECT * FROM godiste')
+        selected_marka = request.args.get('marka')
+
+        return render_template('home.html',marke=marke,modeli=modeli,goriva=goriva,menjaci=menjaci,godista=godista,selected_marka=selected_marka)
+>>>>>>> main
         
     return app
 
