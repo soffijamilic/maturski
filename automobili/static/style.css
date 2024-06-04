@@ -7,15 +7,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-/*
-header{
-    /*background-color:rgb(94, 167, 234);
-    background-color: #F39C12;
-    background-color:#007bff;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-    height: 50px;
-};/* #F39C12;#7F8C8D  zelenkasta*/
-
 .pozadina {
     display: block;
     justify-content: space-between;
@@ -28,19 +19,17 @@ header{
 .pozadina img {
     max-width: 100%;
     height: auto;
-    display: block;
+    display: flex;
 }
 .navbar{
     display: flex;
-    /*justify-content: space-between;*/
     align-items: center;
-    background-color:#99c0e4;/* #F39C12;#7F8C8D  zelenkasta*/
+    background-color:#99c0e4;
     color: white;
     padding: 0rem;
     margin: 0;
     box-shadow: 6px  6px 10px rgba(0, 0, 0, 0.1);
     height: 94px;
-   /* box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);*/
 }
 .linkovi {
     list-style-type: none;
@@ -48,26 +37,36 @@ header{
     margin: 0;
     display: flex;
     justify-content: center;
-   
 }
-
 .linkovi li {
     display: inline;
     margin-right: 9px;
 }
-
 .linkovi a {
     text-decoration: none;
-    color: rgb(0, 0, 0); /* Boja teksta linkova */
+    color: rgb(0, 0, 0); 
     font-size: 18px;
     font-size: larger;
-    padding: 10px 15px; /* Prostor unutar linkova */
-    transition: background-color 0.3s; /* Glatka tranzicija za hover efekat */
+    padding: 10px 15px; 
+    transition: background-color 0.3s; 
 }
-
 .linkovi a:hover {
-    background-color: #8db1d2; /* Hover efekat */
+    background-color: #8db1d2; 
 }
+<<<<<<< HEAD
+.naslov{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: -30px;
+}
+.naslov h1{
+    color:#333;
+    font-size:80px;
+    font-weight: bold;
+=======
 
 .naslov{
     display: flex;
@@ -81,6 +80,7 @@ header{
     font-weight: bold;
     font-size: 60px;
     color: rgba(13, 110, 253, 1);
+>>>>>>> main
 }
 .logo{
     height: 70px;
@@ -91,7 +91,6 @@ form {
     margin: 40px; 
     display: inline-block; 
 }
-
 .formapretrage {
     background: #e0ecf8;
     padding: 20px 40px;
@@ -101,25 +100,21 @@ form {
     display: flex;
     flex-direction: column;
 }
-
 .formapretrage h2 {
     margin-bottom: 20px;
     color: #333;
     text-align: center;
 }
-
 .pretraga {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 15px;
 }
-
 .pretraga div {
     width: 15%;
     margin-bottom: 15px;
 }
-
 .pretraga label {
     display: flex;
     margin-bottom: 5px;
@@ -133,7 +128,6 @@ form {
     border: 1px solid #ddd;
     border-radius: 4px;
 }
-
 .pretraga button {
     width: 100px;
     padding: 10px 15px;
@@ -145,9 +139,35 @@ form {
     cursor: pointer;
     align-self: flex-end;
 }
-
 .pretraga button:hover {
     background-color: #218838;
+}
+#rezultati a {
+    text-decoration: none; /* Skida podvučak */
+}
+.oglas-link a {
+    text-decoration: none; 
+  }
+.card:hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+}
+.full-screen {
+    position: fixed;
+    padding: 20px;
+    overflow: auto;
+}
+#ponude{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:20px
+}
+.slike {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 footer {
     background-color:#39526d;;
@@ -195,7 +215,6 @@ h3{
     right: 20px;
     display: none;
 }
-
 #vratinavrh:hover {
     background-color: #3f5d7d;
 }

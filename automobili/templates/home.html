@@ -15,7 +15,7 @@
         </a>  
         <ul class="linkovi">
             <li><a href="#contact-info">Contact</a></li>
-            <li><a href="#o-nama">O nama</a></li>
+            <li><a href="#ponude">Ponude</a></li>
            <li><a href="#pronadji">Pronadji auto</a></li>
         </ul>
     </nav>
@@ -28,10 +28,19 @@
     {% endfor %}
     {% block content %}{% endblock %}
 </section>
+<<<<<<< HEAD
+    <div class="naslov">
+         <h1>PRONADJITE AUTO ZA VAS!</h1>
+    </div>
+    <br>
+    <br>
+    <br>
+=======
 <div class="naslov">
     <h1>PRONADJITE PRAVI AUTO ZA VAS!</h1>
 </div>
 
+>>>>>>> main
     <div class="pozadina">
         <img src="static/slike/pic.png" alt="">
     </div>
@@ -40,7 +49,7 @@
     <br id="pronadji">
     <div class="formapretrage">
         <h2>Pretraga Automobila</h2>
-        <form action="/search" method="GET" method="GET" action="{{ url_for('oglas.search') }}">
+        <form action="/" method="GET">
             <div class="pretraga">
                 <div>
                     <label for="marka">Marka vozila:</label>
@@ -81,6 +90,20 @@
                        {%endfor%}
                     </select>
                 </div>
+<<<<<<< HEAD
+                
+                <!-- <div>
+                    <label for="tip_vozila">Tip vozila:</label>
+                    <select id="tip_vozila" name="tip_vozila">
+                        <option value="">Izaberite tip vozila</option>
+                        {%for tip_vozila in tipovi_vozila%}
+                        <option value="{{tip_vozila['id']}}">{{tip_vozila['naziv']}}</option>
+                       {%endfor%}
+                    </select>
+                </div> -->
+
+=======
+>>>>>>> main
                 <div>
                     <label for="menjac">Menjac:</label>
                     <select id="menjac" name="menjac">
@@ -112,6 +135,14 @@
                 </div>
                 <div>
                     <label for="godiste_do">Godište do:</label>
+<<<<<<< HEAD
+                    <input type="number" id="godiste_do" name="godiste_do" min="1900" max="2024">
+                </div>
+                <!-- <div>
+                    <label for="kilometraza">Kilometraža:</label>
+                    <input type="number" id="kilometraza" name="kilometraza" min="0">
+                </div> -->
+=======
                     <select id="godiste" name="godiste">
                         <option value="">Izaberite gorivo</option>
                         {%for godiste in godista%}
@@ -119,15 +150,37 @@
                        {%endfor%}
                     </select>
                 </div>
+>>>>>>> main
             </div>
             <div class="pretraga">
                 <button type="submit">Pretraži</button>
             </div>
         </form>
     </div>
+
+    <!--<div class="slike">
+        <img src="{{ url_for('static', filename='slike/toyota.png') }}" alt="Toyota">
+        <img src="{{ url_for('static', filename='slike/honda.png') }}" alt="Honda">
+        <img src="{{ url_for('static', filename='slike/mazda.png') }}" alt="Mazda">
+    </div>-->
+
+    <div>
+        <h1 id="ponude">Pogledajte neke od naši ponuda.</h1>
+    </div>
     <div id="rezultati">
         {% if oglasi %}
             {% for oglas in oglasi %}
+<<<<<<< HEAD
+                <a href="{{ url_for('oglas.view', id=oglas['id']) }}">
+                    <div class="card">
+                        <h2>{{ oglas['title'] }}</h2>
+                        <p>{{ oglas['body'] }}</p>
+                        <p><strong>Cena:</strong> {{ oglas['cena'] }} €</p>
+                        <p><strong>Kilometraža:</strong> {{ oglas['kilometraza'] }} km</p>
+                        <p><strong>Godište:</strong> {{ oglas['godiste'] }}</p>
+                    </div>
+                </a>
+=======
             <div class="card">
                 <h2>{{ oglas['title'] }}</h2>
                 <p>{{ oglas['body'] }}</p>
@@ -135,6 +188,7 @@
                 <p><strong>Kilometraža:</strong> {{ oglas['kilometraza'] }} km</p>
                 <p><strong>Godište:</strong> {{ oglas['godiste'] }}</p>
             </div>
+>>>>>>> main
             {% endfor %}
         {% else %}
             <p>Nema rezultata za prikaz.</p>
@@ -142,29 +196,6 @@
     </div>
 </body>
 </html>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum soluta impedit amet.</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h2 id="o-nama">O nama</h2>
-    
 <script>
     window.onscroll = function() {scrollFunction()};
 
@@ -189,7 +220,6 @@
 <button id="vratinavrh" onclick="scrollToTop()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
     <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
   </svg></button>
-  
 <footer>
     <div id="contact-info">
         <h3>Contact</h3>
@@ -205,11 +235,11 @@
     <div class="location-info">
         <h3>Location</h3>
         <p>123 Street Name</p>
-        <p>City, Country</p>
+        <p>Kragujevac, Srbija</p>
     </div>
     <div class="legal-info">
         <h3>Legal</h3>
-        <p>Company Name</p>
+        <p>Prodaja Polovnih Automobila</p>
         <p>&copy; 2024 Company Name. All rights reserved.</p>
         <p><a href="#">Terms of Use</a></p>
     </div>

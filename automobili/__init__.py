@@ -1,7 +1,7 @@
 import os
 from flask import Flask,render_template,request
 from .db import get_db
-
+from .oglas import search,bp
 
 def create_app(test_config=None):
     # create and configure the app
@@ -40,12 +40,28 @@ def create_app(test_config=None):
         modeli=get_db().execute('SELECT * FROM model')
         goriva=get_db().execute('SELECT * FROM gorivo')
         menjaci=get_db().execute('SELECT * FROM menjac')
+<<<<<<< HEAD
+        # oglasi=[
+        #     {
+        #         'id':1,
+        #         'title':'VW Golf',
+        #         'body':'VW Golf 1.6 TDI',
+        #         'cena': 3000,
+        #         'godiste': 2005,
+        #         'kilometraza': 150000,
+        #     }
+        # ]
+        oglasi = search()
+        print(oglasi)
+        return render_template('home.html',marke=marke,goriva=goriva,tipovi_vozila=tipovi_vozila,menjaci=menjaci,oglasi=oglasi)
+=======
         ''' godiste_od = request.form.get('godiste_od')
         godiste_do = request.form.get('godiste_do')'''
         godista= get_db().execute('SELECT * FROM godiste')
         selected_marka = request.args.get('marka')
 
         return render_template('home.html',marke=marke,modeli=modeli,goriva=goriva,menjaci=menjaci,godista=godista,selected_marka=selected_marka)
+>>>>>>> main
         
     return app
 
