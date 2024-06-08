@@ -28,15 +28,23 @@
     {% endfor %}
     {% block content %}{% endblock %}
 </section>
+<<<<<<< HEAD
     <div class="naslov">
          <h1>PRONADJITE AUTO ZA VAS!</h1>
     </div>
     <br>
     <br>
     <br>
+=======
+<div class="naslov">
+    <h1>PRONADJITE PRAVI AUTO ZA VAS!</h1>
+</div>
+
+>>>>>>> main
     <div class="pozadina">
         <img src="static/slike/pic.png" alt="">
     </div>
+    <br>
     <br>
     <br id="pronadji">
     <div class="formapretrage">
@@ -56,9 +64,21 @@
                     <label for="model">Model vozila:</label>
                     <select id="model" name="model">
                         <option value="">Izaberite model</option>
-                        {%for model in modeli%}
-                         <option value="{{model['id']}}">{{model['naziv']}}</option>
-                        {%endfor%}
+                        {% for model in modeli %}
+                            {% if model['id_marke'] == 1 %}
+                                {% if selected_marka == 1 %}
+                                    <option value="{{model['id']}}">{{model['naziv']}}</option>
+                                {% endif %}
+                            {% elif model['id_marke'] == 2 %}
+                                {% if selected_marka == 2 %}
+                                    <option value="{{model['id']}}">{{model['naziv']}}</option>
+                                {% endif %}
+                            {% elif model['id_marke'] == 3 %}
+                                {% if selected_marka == 3 %}
+                                    <option value="{{model['id']}}">{{model['naziv']}}</option>
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
                     </select>
                 </div>
                 <div>
@@ -70,6 +90,7 @@
                        {%endfor%}
                     </select>
                 </div>
+<<<<<<< HEAD
                 
                 <!-- <div>
                     <label for="tip_vozila">Tip vozila:</label>
@@ -81,6 +102,8 @@
                     </select>
                 </div> -->
 
+=======
+>>>>>>> main
                 <div>
                     <label for="menjac">Menjac:</label>
                     <select id="menjac" name="menjac">
@@ -101,18 +124,33 @@
                     <label for="cena_do">Cena do:</label>
                     <input type="number" id="cena_do" name="cena_do" min="0">
                 </div>
-                <div>
+
                     <label for="godiste_od">Godište od:</label>
-                    <input type="number" id="godiste_od" name="godiste_od" min="1900" max="2024">
+                    <select id="godiste" name="godiste">
+                        <option value="">Izaberite gorivo</option>
+                        {%for godiste in godista%}
+                        <option value="{{godiste['id']}}">{{godiste['godina']}}</option>
+                       {%endfor%}
+                    </select>
                 </div>
                 <div>
                     <label for="godiste_do">Godište do:</label>
+<<<<<<< HEAD
                     <input type="number" id="godiste_do" name="godiste_do" min="1900" max="2024">
                 </div>
                 <!-- <div>
                     <label for="kilometraza">Kilometraža:</label>
                     <input type="number" id="kilometraza" name="kilometraza" min="0">
                 </div> -->
+=======
+                    <select id="godiste" name="godiste">
+                        <option value="">Izaberite gorivo</option>
+                        {%for godiste in godista%}
+                        <option value="{{godiste['id']}}">{{godiste['godina']}}</option>
+                       {%endfor%}
+                    </select>
+                </div>
+>>>>>>> main
             </div>
             <div class="pretraga">
                 <button type="submit">Pretraži</button>
@@ -132,6 +170,7 @@
     <div id="rezultati">
         {% if oglasi %}
             {% for oglas in oglasi %}
+<<<<<<< HEAD
                 <a href="{{ url_for('oglas.view', id=oglas['id']) }}">
                     <div class="card">
                         <h2>{{ oglas['title'] }}</h2>
@@ -141,31 +180,20 @@
                         <p><strong>Godište:</strong> {{ oglas['godiste'] }}</p>
                     </div>
                 </a>
+=======
+            <div class="card">
+                <h2>{{ oglas['title'] }}</h2>
+                <p>{{ oglas['body'] }}</p>
+                <p><strong>Cena:</strong> {{ oglas['cena'] }} E</p>
+                <p><strong>Kilometraža:</strong> {{ oglas['kilometraza'] }} km</p>
+                <p><strong>Godište:</strong> {{ oglas['godiste'] }}</p>
+            </div>
+>>>>>>> main
             {% endfor %}
         {% else %}
             <p>Nema rezultata za prikaz.</p>
         {% endif %}
     </div>
-
-    <script>
-        document.getElementById('marka').addEventListener('change', function() {
-            const markaId = this.value;
-            if (markaId) {
-                fetch(`/get_models/${markaId}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        const modelSelect = document.getElementById('model');
-                        modelSelect.innerHTML = '<option value="">Izaberite model</option>';
-                        data.forEach(model => {
-                            const option = document.createElement('option');
-                            option.value = model.id;
-                            option.textContent = model.naziv;
-                            modelSelect.appendChild(option);
-                        });
-                    });
-            }
-        });
-    </script>
 </body>
 </html>
 <script>

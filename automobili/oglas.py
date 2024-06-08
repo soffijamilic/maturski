@@ -18,11 +18,14 @@ def search():
     if gorivo not in [None, ""]:
         upit+= f' AND id_goriva = {gorivo}'
 
+<<<<<<< HEAD
 
     tip_vozila=request.args.get('tip_vozila')
     if tip_vozila not in [None, ""]:
         upit+= f' AND id_tipa = {tip_vozila}'
 
+=======
+>>>>>>> main
     menjac=request.args.get('menjac')
     if menjac not in [None, ""]:
         upit+= f' AND id_menjaca = {menjac}'
@@ -35,6 +38,7 @@ def search():
     if cena_do not in [None, ""]:
         upit += f' AND cena <= {cena_do}'
 
+<<<<<<< HEAD
     godiste_od = request.args.get('godiste_od')
     if godiste_od not in [None, ""]:
         upit += f' AND godiste >= {godiste_od}'
@@ -46,6 +50,16 @@ def search():
     kilometraza = request.args.get('kilometraza')
     if kilometraza not in [None, ""]:
         upit += f' AND kilometraza <= {kilometraza}'
+=======
+    godiste= request.args.get('godiste')
+    if godiste:
+        upit += f' AND godiste >= {godiste}'
+
+    ''' godiste_do = request.args.get('godiste_do')
+    if godiste_do:
+        upit += f' AND godiste <= {godiste_do}'''
+
+>>>>>>> main
 
     print(upit)
     db = get_db()
