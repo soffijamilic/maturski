@@ -1,0 +1,99 @@
+[33md47ba05[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mapi[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/api[m[33m, [m[1;32mmain[m[33m)[m Merge pull request #3 from soffijamilic/api
+[33mcd16956[m[33m ([m[1;32mbackup-api[m[33m)[m Merge branch 'main' into api
+[33m7eba476[m css final touch
+[33m177435a[m css
+[33m7e44c54[m konacan rezultat
+[33m305239f[m ispravka view-ova
+[33m8f8a127[m dodavanje novih oglasa u bazu
+[33mc913245[m popravljanje oglasa dodavanje slika
+[33m4945ead[m[33m ([m[1;32mbackup-branch[m[33m)[m promena id marke honde i mazde
+[33m5091664[m css izmene
+[33m88913af[m stilizovanje naslova
+[33m8ffcc1c[m ispravljena baza honda i mazda
+[33mc355517[m view-ovi
+[33m49cd404[m vezivanje view
+[33m25f5508[m stilizovanje futera
+[33m24c021a[m baza i ispiis oglasa
+[33ma6d4643[m get-models ruta
+[33maad9363[m baze
+[33mfa562bf[m izmene
+[33m8d2376c[m linkovi
+[33mcb0a02d[m proemne
+[33md1bb693[m slika i uredjivanje
+[33m483b763[m forma iz baze gorivo
+[33m9b1fff0[m kraj
+[33m5e2d57d[m baza
+[33mec490bc[m komit
+[33m2ada1b5[m baza modeli
+[33mf2ac519[m header stilizovanje
+[33m7260ea3[m rad
+[33mc91b6b9[m login
+[33m6c0a0d4[m autentikacija
+[33m1198a74[m ispravke baze
+[33m5ca5225[m kreiranje i ispravljanje forme za pretragu
+[33m7919fea[m ispravke
+[33mdce72bd[m pravljenje baze
+[33m411b53d[m menu
+[33m22113ba[m header
+[33m53e94db[m title
+[33m32024be[m ikonica
+[33ma5891bb[m tabele
+[33mde66f45[m uredjivanje
+[33m6f648bc[m ispravke
+[33m352c8be[m dugme vrati na vrh
+[33m7347dd3[m futer
+[33meac30ca[m ispravke
+[33mb274333[m podesavanja
+[33m00947a7[m baza
+[33mc0cebfc[m logo sredjivanje
+[33m8547a6c[m logo
+[33m4ea52f2[m ispravljanje
+[33m5a8766e[m logo
+[33mf723fda[m ispravljene greske
+[33m92b9e99[m logo
+[33m5f91034[m modeli
+[33mca078d0[m req
+[33mee067f5[m baza
+[33mdd92213[m baza
+[33mbed61f1[m sema
+[33m7335390[m baza
+[33m14e5f24[m baza
+[33mb3e2d35[m logo i navbar
+[33m16d7ac6[m logo
+[33m4ee5721[m navbar
+[33m9ae82fc[m navbar
+[33m47ce200[m import os
+[33mdc90238[m logo
+[33m32a8230[m nav
+[33m0afd6ab[m login
+[33m9d91a24[m logo
+[33m9f649d2[m logo
+[33m1f4bd74[m logo
+[33m316b965[m logo
+[33m916c1f9[m logo
+[33m9618113[m nav bar logo
+[33md92bbf9[m navbar
+[33m4788885[m navbar
+[33ma4b6850[m navbar
+[33m3871bcf[m dodavanje navbara
+[33mbd96a41[m prmoene
+[33m007001e[m provere
+[33m26179d3[m provere
+[33m6af772f[m izmena
+[33md908504[m sign up
+[33m5f907f8[m dodavanje login i sign up
+[33me94ba85[m update
+[33m618c30d[m slika mazda
+[33m39ea016[m centriranje
+[33m68d66cf[m centriranje
+[33mbe1ec8a[m mazda uredjivanje
+[33mc6eb6aa[m stilizovanje dugmica
+[33md1595e7[m stilovi za honda modele
+[33m680144c[m stilovi za toyota model
+[33m77dc9d0[m kreiranje css fajla za toyotu
+[33mac23b86[m kreiranje toyota stranice
+[33m5361da1[m honda stranica
+[33m034d9f1[m dodavanje nove stranice
+[33m1ab642c[m pocetna stranica
+[33m41e8e5e[m tamplates i static direktorijumi
+[33ma8683fc[m napravljen fajl za flask,app
